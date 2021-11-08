@@ -33,7 +33,7 @@
               <ul class="menu">
                 <!-- .menu-item -->
                 <li class="menu-item has-active">
-                  <a href="index.html" class="menu-link"><span class="menu-icon fas fa-home"></span> <span class="menu-text">Dashboard</span></a>
+                  <a href="{{route('dashbord')}}" class="menu-link"><span class="menu-icon fas fa-home"></span> <span class="menu-text">Dashboard</span></a>
                 </li><!-- /.menu-item -->
                 <!-- .menu-item -->
                 <li class="menu-item has-child">
@@ -42,19 +42,28 @@
                     <span class="menu-text">Properties</span></a> <!-- child menu -->
                   <ul class="menu">
                     <li class="menu-item">
-                      <a href="auth-comingsoon-v1.html" class="menu-link">Add New</a>
+                      <a href="{{route('properties.add')}}" class="menu-link">Add New</a>
                     </li>
                     <li class="menu-item">
-                      <a href="auth-comingsoon-v1.html" class="menu-link">All Properties</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="auth-comingsoon-v1.html" class="menu-link">Inquiry Screen</a>
+                      <a href="{{route('properties.all')}}" class="menu-link">All Properties</a>
                     </li>
                   </ul><!-- /child menu -->
                 </li><!-- /.menu-item -->
                 <li class="menu-header">Settings </li>
                 <li class="menu-item">
-                  <a href="landing-page.html" class="menu-link"><span class="menu-icon fas fa-rocket"></span> <span class="menu-text">Landing Page</span></a>
+                  <a href="{{route('settings.phone')}}" class="menu-link">
+                    <span class="menu-icon fas fa-phone"></span> <span class="menu-text">Phones</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{route('settings.areas')}}" class="menu-link">
+                    <span class="menu-icon fas fa-city"></span> <span class="menu-text">Areas</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{route('settings.source')}}" class="menu-link">
+                    <span class="menu-icon fas fa-database"></span> <span class="menu-text">Source</span>
+                  </a>
                 </li>
               </ul><!-- /.menu -->
             </nav><!-- /.stacked-menu -->

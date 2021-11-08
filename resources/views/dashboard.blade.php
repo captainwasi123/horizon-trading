@@ -1,6 +1,7 @@
 @extends('includes.master')
 @section('title', 'Dashboard')
 @section('content')
+
     <div class="page">
       <!-- .page-inner -->
       <div class="page-inner">

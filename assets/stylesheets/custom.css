@@ -1,1 +1,17 @@
 /* put your own styles to customize and override the theme */
+.btn-default {
+    border: 1px solid;
+}
+.paginate_button {
+    padding: 7px 25px;
+    border: 1px solid #e6e6e6;
+    margin: 5px;
+}
+.paginate_button.disabled {
+    background-color: #e6e6e661;
+    color: #0000007d;
+}
+.inline-btn {
+    text-align: right;
+    padding-top: 14px;
+}
