@@ -15,3 +15,38 @@
     text-align: right;
     padding-top: 14px;
 }
+.qoutation-table tbody tr th {
+    padding: 0;
+}
+.qoutation-heading {
+    background-color: #f3f3f4;
+    padding: 7px;
+    margin: 0;
+}
+.qoutation-table tbody tr td {
+    font-size: 16px;
+    font-weight: 600;
+}
+.qoutation-table tbody tr td label {
+    font-weight: 100;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+.qoutation-btn{
+    width: 100%;
+    margin-top: -1px;
+}
+
+
+
+
+
+
+
+
+
+
+/*margin - padding */
+.m-b-10{
+    margin-bottom: 10px;
+}

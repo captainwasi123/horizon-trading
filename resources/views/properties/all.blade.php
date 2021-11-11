@@ -50,12 +50,12 @@
                     <td>{{@$val->user->username}}</td>
                     <td>{{date('d-M-Y h:i A', strtotime($val->created_at))}}</td>
                     <td class="align-middle text-right">
-                      <a href="#" class="btn btn-sm btn-icon btn-secondary" data-toggle="tooltip" data-placement="top" data-original-title="Add Qoute" title="Add Qoute">
-                        <i class="oi oi-tags"></i> <span class="sr-only">Add Qoute</span>
+                      <a href="{{route('properties.qoutation', base64_encode($val->id))}}" class="btn btn-sm btn-secondary" title="Add Qoute">
+                        <i class="oi oi-tags"></i> Add Qoute
                       </a> 
 
-                      <a href="#" class="btn btn-sm btn-icon btn-danger"  data-toggle="tooltip" data-placement="top" data-original-title="Remove" title="Add Qoute">
-                        <i class="far fa-trash-alt"></i> <span class="sr-only">Remove</span>
+                      <a href="javascript::void(0)" data-href="{{route('properties.delete', base64_encode($val->id))}}" class="btn btn-sm btn-danger deleteProperty" title="Remove">
+                        <i class="far fa-trash-alt"></i> Remove
                       </a>
                     </td>
                   </tr>
@@ -100,6 +100,13 @@
         responsive: true,
         dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>\n        <'table-responsive'tr>\n        <'row align-items-center'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 d-flex justify-content-end'p>>",
         
+      });
+
+      $(document).on('click', '.deleteProperty', function(){
+        var href = $(this).data('href');
+        if(confirm('Are you sure?')){
+          window.location.href = href;
+        }
       });
     });
   </script>  

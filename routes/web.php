@@ -29,6 +29,17 @@ use Illuminate\Support\Facades\Route;
 
                 Route::get('add', 'propertyController@add')->name('properties.add');
                 Route::post('add', 'propertyController@addSubmit');
+
+                Route::get('delete/{id}', 'propertyController@propertyDelete')->name('properties.delete');
+
+                //Qoutation
+                Route::prefix('qoutation')->group(function(){
+
+                    Route::get('/{id}', 'propertyController@qoutation')->name('properties.qoutation');
+                    Route::post('/add', 'propertyController@qoutationAdd')->name('properties.qoutation.add');
+
+                    Route::get('delete/{id}', 'propertyController@qoutationDelete')->name('properties.qoutation.delete');
+                });
             });
 
 

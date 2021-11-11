@@ -20,3 +20,12 @@
             });
         </script>
     @endif
+    @if(session()->has('warning'))
+        <script type="text/javascript">
+            $(document).ready(function(){
+              'use strict'
+
+              swal("Warning!", "{{ session()->get('warning') }}", "warning");
+            });
+        </script>
+    @endif

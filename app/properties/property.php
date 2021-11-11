@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Auth;
 use App\properties\source;
 use App\properties\areas;
+use App\properties\qoutation;
 use App\user;
 
 class property extends Model
@@ -42,5 +43,9 @@ class property extends Model
 
     public function area(){
         return $this->belongsTo(areas::class, 'area_id');
+    }
+
+    public function qoutation(){
+        return $this->hasMany(qoutation::class, 'property_id', 'id');
     }
 }
