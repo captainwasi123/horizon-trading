@@ -4,6 +4,7 @@ namespace App\properties;
 
 use Illuminate\Database\Eloquent\Model;
 use App\settings\phone;
+use App\properties\property;
 use App\User;
 
 class qoutation extends Model
@@ -13,6 +14,9 @@ class qoutation extends Model
 
     public function user(){
         return $this->belongsTo(User::class, 'created_by');
+    }
+    public function property(){
+        return $this->belongsTo(property::class, 'property_id');
     }
 
     public function phone(){

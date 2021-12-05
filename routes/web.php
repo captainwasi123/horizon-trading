@@ -22,6 +22,8 @@ use Illuminate\Support\Facades\Route;
 
             Route::get('/', 'dashboardController@index')->name('dashbord');
 
+            Route::post('/filter', 'dashboardController@filter')->name('filter');
+
             //Properties
             Route::prefix('properties')->group(function(){
 
