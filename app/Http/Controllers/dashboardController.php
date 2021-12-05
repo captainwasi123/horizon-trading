@@ -37,7 +37,17 @@ class dashboardController extends Controller
                                         })
                                         ->when(!empty($req['precent']), function($q) use ($req){
                                             return $q->whereHas('property', function($qq) use ($req){
-                                                return $qq->where('precent', $req['precent']);
+                                                return $qq->where('precent', 'LIKE', '%'.$req['precent'].'%');
+                                            });
+                                        })
+                                        ->when(!empty($req['plot_size']), function($q) use ($req){
+                                            return $q->whereHas('property', function($qq) use ($req){
+                                                return $qq->where('plot_size', 'LIKE', '%'.$req['plot_size'].'%');
+                                            });
+                                        })
+                                        ->when(!empty($req['plot_no']), function($q) use ($req){
+                                            return $q->whereHas('property', function($qq) use ($req){
+                                                return $qq->where('plot_no', 'LIKE', '%'.$req['plot_no'].'%');
                                             });
                                         })
                                         ->get()
